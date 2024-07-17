@@ -1,0 +1,136 @@
+@import "../../var.css";
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 49px;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-text);
+  z-index: 1;
+  flex: 1; /* Allow content to take up remaining space */
+}
+
+.title {
+  font-size: 72px;
+  font-weight: 900;
+  margin-bottom: 33px;
+  font-family: var(--font-roboto);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 120%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.description {
+  font-size: 30px;
+  font-family: var(--font-roboto);
+  margin-bottom: 52px;
+}
+
+.contactBtn {
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border-radius: 100px;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 17px 26px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.virajimgContainer {
+  flex: 0 1 auto; /* Allow the image container to take its natural width */
+  
+}
+
+.virajimg {
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    /*filter: brightness(1.2);  Adjust the brightness to make the image lighter */
+  }
+  
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.topBlur {
+  position: absolute;
+  top: -128px;
+  left: 30vw;
+  width: 50vw;
+  height: 50vw;
+  min-width: 350px;
+  min-height: 350px;
+  border: 764px;
+  background: rgba(4, 21, 45, 0.8);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.bottomBlur {
+    position: absolute;
+    top: 246px;
+    left: -45vw;
+    width: 70vw;
+    height: 50vw;
+    min-width: 350px;
+    min-height: 250px;
+    border-radius: 764px;
+    background: rgba(25, 55, 109, 0.7);
+    filter: blur(100px);
+    z-index: 0;
+  }
+
+/* Add media queries to handle smaller screens */
+@media (max-width: 830px) {
+  .container {
+    flex-direction: column; /* Stack the items vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .virajimgContainer,
+  .content {
+    flex: 1 1 100%; /* Allow each to take full width */
+    max-width: 100%;
+    text-align: center; /* Center text for smaller screens */
+    align-items: center; /* Center align items */
+  }
+
+  .title {
+    font-size: 48px; /* Adjust font size for smaller screens */
+  }
+
+  .description {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  .contactBtn {
+    font-size: 24px; /* Adjust font size for smaller screens */
+    padding: 12px 20px; /* Adjust padding for smaller screens */
+  }
+}
+

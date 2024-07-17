@@ -1,0 +1,19 @@
+[
+  {
+    "role": "Project Manager",
+    "organisation": "Make It Viral Media",
+    "startDate": "August, 2021",
+    "endDate": "Present",
+    "experiences": ["Developed and communicated comprehensive project plans", "Led a diverse team of designers"],
+    "imageSrc": "history/MakeItviralmedia.png"
+  },
+  {
+    "role": "President",
+    "organisation": "Sunshine Meditation Center ",
+    "startDate": "December, 2012",
+    "endDate": "March, 2017",
+    "experiences": ["Developed and communicated comprehensive project plans", "Led a diverse team of designers"],
+    "imageSrc": "history/Sunshine.png"
+  }
+ 
+]
